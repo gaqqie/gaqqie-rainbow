@@ -2,7 +2,7 @@
 
 **This is a beta version.**
 
-[![License](https://img.shields.io/github/license/gaqqie/gaqqie-rainbow.svg?style=flat)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/github/license/gaqqie/gaqqie-rainbow)](https://opensource.org/licenses/Apache-2.0)
 
 
 ## What is **gaqqie-rainbow**?
