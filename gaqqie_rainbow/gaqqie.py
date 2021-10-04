@@ -5,7 +5,7 @@ import time
 from typing import Callable
 
 
-from .rest import Configuration, JobApi, Result
+from .rest import Configuration, JobApi, DeviceApi, ProviderApi, Result
 from .rest.api_client2 import ApiClient2
 
 
@@ -42,10 +42,20 @@ class Gaqqie:
         rest_config.host = self._url
         self._api_client = ApiClient2(rest_config)
         self._job_api = JobApi(api_client=self._api_client)
+        self._device_api = DeviceApi(api_client=self._api_client)
+        self._provider_api = ProviderApi(api_client=self._api_client)
 
     @property
     def job_api(self) -> JobApi:
         return self._job_api
+
+    @property
+    def device_api(self) -> DeviceApi:
+        return self._device_api
+
+    @property
+    def provider_api(self) -> ProviderApi:
+        return self._provider_api
 
     def join(self) -> None:
         [thread.join() for thread in self._thread_list]
